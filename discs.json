@@ -1,0 +1,716 @@
+[
+  {
+    "name": "FIRESTORM",
+    "speed": 14,
+    "glide": 4,
+    "turn": -1,
+    "fade": 3
+  },
+  {
+    "name": "CORVETTE",
+    "speed": 14,
+    "glide": 6,
+    "turn": -1,
+    "fade": 2
+  },
+  {
+    "name": "COLOSSUS",
+    "speed": 14,
+    "glide": 5,
+    "turn": -2,
+    "fade": 3
+  },
+  {
+    "name": "VULCAN",
+    "speed": 13,
+    "glide": 5,
+    "turn": -4,
+    "fade": 2
+  },
+  {
+    "name": "SHRYKE",
+    "speed": 13,
+    "glide": 6,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "KATANA",
+    "speed": 13,
+    "glide": 5,
+    "turn": -3,
+    "fade": 3
+  },
+  {
+    "name": "GROOVE",
+    "speed": 13,
+    "glide": 6,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "DOMINATOR",
+    "speed": 13,
+    "glide": 5,
+    "turn": -1,
+    "fade": 2
+  },
+  {
+    "name": "DAEDALUS",
+    "speed": 13,
+    "glide": 6,
+    "turn": -3,
+    "fade": 2
+  },
+  {
+    "name": "BOSS",
+    "speed": 13,
+    "glide": 5,
+    "turn": -1,
+    "fade": 3
+  },
+  {
+    "name": "APE",
+    "speed": 13,
+    "glide": 5,
+    "turn": 0,
+    "fade": 4
+  },
+  {
+    "name": "XCALIBER",
+    "speed": 12,
+    "glide": 5,
+    "turn": 0,
+    "fade": 4
+  },
+  {
+    "name": "WAHOO",
+    "speed": 12,
+    "glide": 6,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "TERN",
+    "speed": 12,
+    "glide": 6,
+    "turn": -3,
+    "fade": 2
+  },
+  {
+    "name": "TEEDEVIL",
+    "speed": 12,
+    "glide": 5,
+    "turn": -1,
+    "fade": 2
+  },
+  {
+    "name": "DESTROYER",
+    "speed": 12,
+    "glide": 5,
+    "turn": -1,
+    "fade": 3
+  },
+  {
+    "name": "WRAITH",
+    "speed": 11,
+    "glide": 5,
+    "turn": -1,
+    "fade": 3
+  },
+  {
+    "name": "TEEREX",
+    "speed": 11,
+    "glide": 4,
+    "turn": 0,
+    "fade": 4
+  },
+  {
+    "name": "MYSTERE",
+    "speed": 11,
+    "glide": 6,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "MAX",
+    "speed": 11,
+    "glide": 3,
+    "turn": 0,
+    "fade": 5
+  },
+  {
+    "name": "MAMBA",
+    "speed": 11,
+    "glide": 6,
+    "turn": -5,
+    "fade": 1
+  },
+  {
+    "name": "KRAIT",
+    "speed": 11,
+    "glide": 5,
+    "turn": -1,
+    "fade": 2
+  },
+  {
+    "name": "ARCHON",
+    "speed": 11,
+    "glide": 5,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "STARFIRE",
+    "speed": 10,
+    "glide": 4,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "ORC",
+    "speed": 10,
+    "glide": 4,
+    "turn": -1,
+    "fade": 3
+  },
+  {
+    "name": "MONSTER",
+    "speed": 10,
+    "glide": 3,
+    "turn": 0,
+    "fade": 5
+  },
+  {
+    "name": "MONARCH",
+    "speed": 10,
+    "glide": 5,
+    "turn": -4,
+    "fade": 1
+  },
+  {
+    "name": "BEAST",
+    "speed": 10,
+    "glide": 5,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "VIKING",
+    "speed": 9,
+    "glide": 4,
+    "turn": -1,
+    "fade": 2
+  },
+  {
+    "name": "VALKYRIE",
+    "speed": 9,
+    "glide": 4,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "THUNDERBIRD",
+    "speed": 9,
+    "glide": 5,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "SIDEWINDER",
+    "speed": 9,
+    "glide": 5,
+    "turn": -3,
+    "fade": 1
+  },
+  {
+    "name": "ROADRUNNER",
+    "speed": 9,
+    "glide": 5,
+    "turn": -4,
+    "fade": 1
+  },
+  {
+    "name": "FL",
+    "speed": 9,
+    "glide": 3,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "FIREBIRD",
+    "speed": 9,
+    "glide": 3,
+    "turn": 0,
+    "fade": 4
+  },
+  {
+    "name": "TL3",
+    "speed": 8,
+    "glide": 4,
+    "turn": -1,
+    "fade": 1
+  },
+  {
+    "name": "TEEBIRD3",
+    "speed": 8,
+    "glide": 4,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "DRAGON",
+    "speed": 8,
+    "glide": 5,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "ARCHANGEL",
+    "speed": 8,
+    "glide": 6,
+    "turn": -4,
+    "fade": 1
+  },
+  {
+    "name": "TL",
+    "speed": 7,
+    "glide": 5,
+    "turn": -1,
+    "fade": 1
+  },
+  {
+    "name": "TEEBIRD",
+    "speed": 7,
+    "glide": 5,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "LEOPARD3",
+    "speed": 7,
+    "glide": 5,
+    "turn": -2,
+    "fade": 1
+  },
+  {
+    "name": "EAGLE",
+    "speed": 7,
+    "glide": 4,
+    "turn": -1,
+    "fade": 3
+  },
+  {
+    "name": "BANSHEE",
+    "speed": 7,
+    "glide": 3,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "WHIPPET",
+    "speed": 6,
+    "glide": 3,
+    "turn": 1,
+    "fade": 5
+  },
+  {
+    "name": "VIPER",
+    "speed": 6,
+    "glide": 4,
+    "turn": 1,
+    "fade": 5
+  },
+  {
+    "name": "LEOPARD",
+    "speed": 6,
+    "glide": 5,
+    "turn": -2,
+    "fade": 1
+  },
+  {
+    "name": "GAZELLE",
+    "speed": 6,
+    "glide": 4,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "CHEETAH",
+    "speed": 6,
+    "glide": 4,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "CAIMAN",
+    "speed": 5.5,
+    "glide": 2,
+    "turn": 0,
+    "fade": 4
+  },
+  {
+    "name": "WOMBAT3",
+    "speed": 5,
+    "glide": 6,
+    "turn": -1,
+    "fade": 0
+  },
+  {
+    "name": "WOMBAT",
+    "speed": 5,
+    "glide": 6,
+    "turn": -1,
+    "fade": 0
+  },
+  {
+    "name": "VCOBRA",
+    "speed": 5,
+    "glide": 5,
+    "turn": -1,
+    "fade": 2
+  },
+  {
+    "name": "SPIDER",
+    "speed": 5,
+    "glide": 3,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "SKEETER",
+    "speed": 5,
+    "glide": 5,
+    "turn": -1,
+    "fade": 1
+  },
+  {
+    "name": "SHARK3",
+    "speed": 5,
+    "glide": 4,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "ROCX3",
+    "speed": 5,
+    "glide": 4,
+    "turn": 0,
+    "fade": 3.5
+  },
+  {
+    "name": "ROC3",
+    "speed": 5,
+    "glide": 4,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "PANTHER",
+    "speed": 5,
+    "glide": 4,
+    "turn": -2,
+    "fade": 1
+  },
+  {
+    "name": "MANTA",
+    "speed": 5,
+    "glide": 5,
+    "turn": -2,
+    "fade": 1
+  },
+  {
+    "name": "MAKO3",
+    "speed": 5,
+    "glide": 5,
+    "turn": 0,
+    "fade": 0
+  },
+  {
+    "name": "LION",
+    "speed": 5,
+    "glide": 4,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "KITE",
+    "speed": 5,
+    "glide": 6,
+    "turn": -3,
+    "fade": 1
+  },
+  {
+    "name": "GATOR",
+    "speed": 5,
+    "glide": 2,
+    "turn": 0,
+    "fade": 4
+  },
+  {
+    "name": "FOXBAT",
+    "speed": 5,
+    "glide": 6,
+    "turn": -1,
+    "fade": 0
+  },
+  {
+    "name": "CRO",
+    "speed": 5,
+    "glide": 3,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "ATLAS",
+    "speed": 5,
+    "glide": 4,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "WOLF",
+    "speed": 4,
+    "glide": 3,
+    "turn": -4,
+    "fade": 1
+  },
+  {
+    "name": "VROC",
+    "speed": 4,
+    "glide": 4,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "STINGRAY",
+    "speed": 4,
+    "glide": 5,
+    "turn": -3,
+    "fade": 1
+  },
+  {
+    "name": "SHARK",
+    "speed": 4,
+    "glide": 4,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "ROC+",
+    "speed": 4,
+    "glide": 5,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "ROC",
+    "speed": 4,
+    "glide": 4,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "RAT",
+    "speed": 4,
+    "glide": 2,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "MAKO",
+    "speed": 4,
+    "glide": 5,
+    "turn": 0,
+    "fade": 0
+  },
+  {
+    "name": "KING COBRA",
+    "speed": 4,
+    "glide": 5,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "COYOTE",
+    "speed": 4,
+    "glide": 5,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "COBRA",
+    "speed": 4,
+    "glide": 5,
+    "turn": -2,
+    "fade": 2
+  },
+  {
+    "name": "WEDGE",
+    "speed": 3.5,
+    "glide": 3,
+    "turn": -3,
+    "fade": 1
+  },
+  {
+    "name": "XD",
+    "speed": 3,
+    "glide": 4,
+    "turn": -1,
+    "fade": 1
+  },
+  {
+    "name": "STUD",
+    "speed": 3,
+    "glide": 3,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "PIG",
+    "speed": 3,
+    "glide": 1,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "MIRAGE",
+    "speed": 3,
+    "glide": 4,
+    "turn": -3,
+    "fade": 0
+  },
+  {
+    "name": "HYDRA",
+    "speed": 3,
+    "glide": 3,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "DART",
+    "speed": 3,
+    "glide": 4,
+    "turn": 0,
+    "fade": 0
+  },
+  {
+    "name": "COLT",
+    "speed": 3,
+    "glide": 4,
+    "turn": -1,
+    "fade": 1
+  },
+  {
+    "name": "BULLFROG",
+    "speed": 3,
+    "glide": 1,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "AVIARX3",
+    "speed": 3,
+    "glide": 2,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "AVIAR3",
+    "speed": 3,
+    "glide": 2,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "AERO",
+    "speed": 3,
+    "glide": 6,
+    "turn": 0,
+    "fade": 0
+  },
+  {
+    "name": "YETI AVIAR",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "WHALE",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "RHYNO",
+    "speed": 2,
+    "glide": 1,
+    "turn": 0,
+    "fade": 3
+  },
+  {
+    "name": "NOVA",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 0
+  },
+  {
+    "name": "KC AVIAR",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "JK AVIAR",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "CLASSIC AVIAR",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 0
+  },
+  {
+    "name": "AVIAR DRIVER",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 2
+  },
+  {
+    "name": "AVIAR",
+    "speed": 2,
+    "glide": 3,
+    "turn": 0,
+    "fade": 1
+  },
+  {
+    "name": "SONIC",
+    "speed": 1,
+    "glide": 2,
+    "turn": -4,
+    "fade": 0
+  },
+  {
+    "name": "POLECAT",
+    "speed": 1,
+    "glide": 3,
+    "turn": 0,
+    "fade": 0
+  },
+  {
+    "name": "BIRDIE",
+    "speed": 1,
+    "glide": 2,
+    "turn": 0,
+    "fade": 0
+  }
+]
