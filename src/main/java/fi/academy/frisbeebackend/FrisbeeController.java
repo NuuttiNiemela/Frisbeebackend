@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -28,7 +29,8 @@ public class FrisbeeController {
 
     @PostMapping("")
     public ResponseEntity<Frisbee> addFrisbee(@RequestBody Frisbee frisbee, UriComponentsBuilder builder) {
-        List<Frisbee> list = fr.findById(frisbee.getId());
+        List<Frisbee> list = new ArrayList<>();
+        fr.findById(frisbee.getId()).ifPresent(list::add);
         if (list.size() > 0) {
             return new ResponseEntity("Adding failed, Frisbee with that id already exists",HttpStatus.CONFLICT);
         } else {
