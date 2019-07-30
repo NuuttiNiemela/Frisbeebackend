@@ -16,10 +16,12 @@ import java.util.List;
 @RequestMapping("/api/frisbee")
 public class FrisbeeController {
     private FrisbeeRepository fr;
+    private int seuraavaArvo;
 
     @Autowired
     public FrisbeeController(FrisbeeRepository fr) {
         this.fr = fr;
+        this.seuraavaArvo = 0;
     }
 
     @GetMapping("")
@@ -30,6 +32,11 @@ public class FrisbeeController {
     @PostMapping("")
     public ResponseEntity<Frisbee> addFrisbee(@RequestBody Frisbee frisbee, UriComponentsBuilder builder) {
         List<Frisbee> list = new ArrayList<>();
+        for(Frisbee f : fr.findAll()) {
+            if(seuraavaArvo < f.getId()) seuraavaArvo = f.getId();
+        }
+        seuraavaArvo++;
+        frisbee.setId(seuraavaArvo);
         fr.findById(frisbee.getId()).ifPresent(list::add);
         if (list.size() > 0) {
             return new ResponseEntity("Adding failed, Frisbee with that id already exists",HttpStatus.CONFLICT);
@@ -37,8 +44,34 @@ public class FrisbeeController {
             HttpHeaders headers = new HttpHeaders();
             headers.setLocation(builder.path("/{id}").buildAndExpand(frisbee.getId()).toUri());
             fr.save(frisbee);
-            return new ResponseEntity<>(headers, HttpStatus.CREATED);
+            return new ResponseEntity<>(frisbee, HttpStatus.CREATED);
         }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteFrisbee(@PathVariable("id") int id) {
+        List<Frisbee> list = new ArrayList<>();
+        fr.findById(id).ifPresent(list::add);
+        if (list.size() > 0) {
+            fr.delete(list.get(0));
+            return new ResponseEntity("Deletion succesful", HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity("Deleting failed", HttpStatus.CONFLICT);
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Frisbee> updateFrisbee(@PathVariable("id") int id,@RequestBody Frisbee frisbee) {
+        frisbee.setId(id);
+        Frisbee tempFrisbee = fr.findOne(id);
+        if(frisbee.getName() != null) tempFrisbee.setName(frisbee.getName());
+        if(frisbee.getSpeed() != null) tempFrisbee.setSpeed(frisbee.getSpeed());
+        if(frisbee.getGlide() != null) tempFrisbee.setGlide(frisbee.getGlide());
+        if(frisbee.getTurn() != null) tempFrisbee.setTurn(frisbee.getTurn());
+        if(frisbee.getFade() != null) tempFrisbee.setFade(frisbee.getFade());
+
+        fr.save(tempFrisbee);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
