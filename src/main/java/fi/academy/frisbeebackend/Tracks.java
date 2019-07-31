@@ -26,10 +26,10 @@ import javax.persistence.*;
         private String location;
 
         @Column(name="X")
-        private int x;
+        private Double x;
 
         @Column(name="Y")
-        private int y;
+        private Double y;
 
 
         public Tracks() {}
@@ -66,19 +66,19 @@ import javax.persistence.*;
             this.location = location;
         }
 
-        public int getX() {
+        public double getX() {
             return x;
         }
 
-        public void setX(int x) {
+        public void setX(double x) {
             this.x = x;
         }
 
-        public int getY() {
+        public double getY() {
             return y;
         }
 
-        public void setY(int y) {
+        public void setY(double y) {
             this.y = y;
         }
 
