@@ -8,6 +8,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
+//FrisbeeRepositoryn luonti. CRUD-toiminnot extendattu ja lisätty haut Id:n perusteella ja nimen perusteella,
+// sekä apuhakija omalla queryllä, jotta saadaan oikean muotoinen olio frisbeen tietokanta muokkaukseen.
 @RepositoryRestResource(collectionResourceRel = "frisbees", path = "frisbees")
 public interface FrisbeeRepository extends CrudRepository<Frisbee, Integer> {
     List<Frisbee> findByNameContainsIgnoreCase (@Param("haku") String haku);
