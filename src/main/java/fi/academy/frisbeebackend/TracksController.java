@@ -26,13 +26,6 @@ public class TracksController {
         this.tr = tr;
 //        this.seuraavaArvo = 0;
     }
-/*
-    //    Kaikkien kiekkojen hakutoiminto.
-    @GetMapping("")
-    public Iterable<Frisbee> findAll() {
-        return fr.findAll();
-    }
-*/
 
     @GetMapping("/api/list")
         public Iterable<Tracks> list() {
