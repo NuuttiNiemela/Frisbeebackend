@@ -74,7 +74,7 @@ public class FrisbeeController {
     public ResponseEntity<Frisbee> updateFrisbee(@PathVariable("id") int id,@RequestBody Frisbee frisbee) {
         frisbee.setId(id);
         Frisbee tempFrisbee = fr.findOne(id);
-        if(frisbee.getName() != null) tempFrisbee.setName(frisbee.getName());
+        if(frisbee.getName() != null && frisbee.getName() != "") tempFrisbee.setName(frisbee.getName());
         if(frisbee.getSpeed() != null) tempFrisbee.setSpeed(frisbee.getSpeed());
         if(frisbee.getGlide() != null) tempFrisbee.setGlide(frisbee.getGlide());
         if(frisbee.getTurn() != null) tempFrisbee.setTurn(frisbee.getTurn());
