@@ -1,12 +1,13 @@
 package fi.academy.frisbeebackend;
 
-import fi.academy.frisbeebackend.repositories.FrisbeeRepository;
 import fi.academy.frisbeebackend.repositories.TracksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -14,22 +15,36 @@ import org.springframework.web.bind.annotation.RestController;
 public class TracksController {
     private TracksRepository tr;
 
-
-    private TracksService tracksService;
-
-        public TracksController(TracksService tracksService) {
-            this.tracksService = tracksService;
-        }
-
+    //    Konstruktori, jossa tuodaan TracksRepositorio konstruktorin käyttöön.
     @Autowired
     public TracksController(TracksRepository tr) {
         this.tr = tr;
-//        this.seuraavaArvo = 0;
     }
 
-    @GetMapping("/api/list")
-        public Iterable<Tracks> list() {
-            return tracksService.list();
+//    kaikkien tracksien haku
+    @GetMapping("")
+        public Iterable<Tracks> findAll() {
+            return tr.findAll();
         }
+
+        @GetMapping("/haku")
+        public Iterable<Tracks>findByName(@RequestParam String param){
+            return tr.findByFullnameContainsIgnoreCase(param);
+    }
+
+    // haetaan annetaan parametrin perusteella Pageable metodilla jolla voidaan maarittaa tulosten ja sivujen maara,
+//    annetaan tulos nousevassa järjestyksessä
+    @GetMapping("/tracksascending")
+    public Iterable<Tracks>findTracksByParamAsc(@RequestParam int page, String param){
+        Pageable pa = PageRequest.of(page, 15, Sort.Direction.ASC, param);
+        return tr.findAll(pa);
+    }
+
+    @GetMapping("/trackdescending")
+    public Iterable<Tracks>findTracksByParamDesc(@RequestParam int page, String param){
+        Pageable pa = PageRequest.of(page, 15, Sort.Direction.DESC, param);
+        return tr.findAll(pa);
+    }
+
     }
 

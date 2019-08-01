@@ -11,9 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,14 +87,14 @@ public class FrisbeeController {
 // haetaan annetaan parametrin perusteella Pageable metodilla jolla voidaan maarittaa tulosten ja sivujen maara,
 //    annetaan tulos nousevassa järjestyksessä
     @GetMapping("/frisbeeascending")
-    public Iterable<Frisbee>findFrisbeeByName(@RequestParam int page, String param){
+    public Iterable<Frisbee>findFrisbeeByParamAsc(@RequestParam int page, String param){
         Pageable p = PageRequest.of(page, 15, Sort.Direction.ASC, param);
         return fr.findAll(p);
     }
     // haetaan annetaan parametrin perusteella Pageable metodilla jolla voidaan maarittaa tulosten ja sivujen maara,
 //    annetaan tulos laskevassa järjestyksessä
     @GetMapping("/frisbeedescending")
-    public Iterable<Frisbee>findFrsibeeBySpeed(@RequestParam int page, String param) {
+    public Iterable<Frisbee>findFrsibeeByParamDesc(@RequestParam int page, String param) {
         Pageable p = PageRequest.of(page, 15, Sort.Direction.DESC, param);
         return fr.findAll(p);
     }
