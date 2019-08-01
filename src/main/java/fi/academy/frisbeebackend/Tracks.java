@@ -14,21 +14,22 @@ import javax.persistence.*;
 
         @Id
         @GeneratedValue( strategy = GenerationType.IDENTITY )
-        @Column(name="ID")
+        @Column(name="id")
         private Integer id;
-        @Column(name="Fullname")
+
+        @Column(name="fullname")
         private String fullname;
 
-        @Column(name="City")
+        @Column(name="city")
         private String city;
 
-        @Column(name="Location")
+        @Column(name="location")
         private String location;
 
-        @Column(name="X")
+        @Column(name="x")
         private Double x;
 
-        @Column(name="Y")
+        @Column(name="y")
         private Double y;
 
 
