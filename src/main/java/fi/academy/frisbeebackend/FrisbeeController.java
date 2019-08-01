@@ -99,7 +99,8 @@ public class FrisbeeController {
         return fr.findAll(p);
     }
 
-
-
-
+    @GetMapping("/{haku}")
+    public Iterable<Frisbee>findByName(@PathVariable String haku) {
+        return fr.findByNameContainsIgnoreCase(haku);
+    }
 }
