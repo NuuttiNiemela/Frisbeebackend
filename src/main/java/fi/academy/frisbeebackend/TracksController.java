@@ -32,7 +32,7 @@ public class TracksController {
             return tr.findByFullnameContainsIgnoreCase(param);
     }
 
-    // haetaan annetaan parametrin perusteella Pageable metodilla jolla voidaan maarittaa tulosten ja sivujen maara,
+    // haetaan annetun parametrin perusteella Pageable metodilla jolla voidaan määrittää tulosten ja sivujen määrä,
 //    annetaan tulos nousevassa järjestyksessä
     @GetMapping("/tracksascending")
     public Iterable<Tracks>findTracksByParamAsc(@RequestParam int page, String param){

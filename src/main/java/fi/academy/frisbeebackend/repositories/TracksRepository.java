@@ -10,7 +10,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
 
-//TracksRepositoryn luonti. CRUD-toiminnot extendattu ja lisätty haut Id:n perusteella ja nimen perusteella,
+//TracksRepositoryn luonti. Paging and Sorting-toiminnot extendattu ja lisätty haut Id:n perusteella ja nimen perusteella,
 // sekä apuhakija omalla queryllä, jotta saadaan oikean muotoinen olio tracks tietokannan muokkaukseen.
 @RepositoryRestResource(collectionResourceRel = "tracks", path = "tracks")
 public interface TracksRepository  extends PagingAndSortingRepository<Tracks, Integer> {
