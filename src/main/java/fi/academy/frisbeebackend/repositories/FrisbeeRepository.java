@@ -9,8 +9,10 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
-//FrisbeeRepositoryn luonti. Paging ja Sorting-toiminnot extendattu ja lisätty haut Id:n perusteella ja nimen perusteella,
-// sekä apuhakija omalla queryllä, jotta saadaan oikean muotoinen olio frisbeen tietokanta muokkaukseen.
+/**
+ * FrisbeeRepositoryn luonti. Paging ja Sorting-toiminnot extendattu ja lisätty haut Id:n perusteella ja nimen perusteella,
+ * sekä apuhakija omalla queryllä, jotta saadaan oikean muotoinen olio frisbeen tietokanta muokkaukseen.
+*/
 @RepositoryRestResource(collectionResourceRel = "frisbees", path = "frisbees")
 public interface FrisbeeRepository extends PagingAndSortingRepository<Frisbee, Integer> {
     

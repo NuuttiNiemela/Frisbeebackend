@@ -13,27 +13,35 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-//Conroller-class, johon lisätty alku url-annotaatio, CrossOrigin estämään CORS-ongelmat ja Springin vaatima RestController annotaatio.
-
+/**
+ * Controller-class, johon lisätty alku url-annotaatio, CrossOrigin estämään CORS-ongelmat ja Springin vaatima RestController annotaatio.
+ */
 @RestController
 @CrossOrigin
 @RequestMapping("/api/frisbee")
 public class FrisbeeController {
     private FrisbeeRepository fr;
 
-//    Konstruktori, jossa tuodaan FrisbeeRepositori konstruktorin käyttöön.
+
+    /**
+     * Konstruktori, jossa tuodaan FrisbeeRepositori konstruktorin käyttöön.
+     */
     @Autowired
     public FrisbeeController(FrisbeeRepository fr) {
         this.fr = fr;
     }
 
-//    Kaikkien kiekkojen hakutoiminto.
+    /**
+     * Kaikkien kiekkojen hakutoiminto.
+     */
     @GetMapping("")
     public Iterable<Frisbee> findAll() {
         return fr.findAll();
     }
 
-//    Uuden kiekon lisääminen.
+    /**
+     * Uuden kiekon lisääminen.
+     */
     @PostMapping("")
     public ResponseEntity<Frisbee> addFrisbee(@RequestBody Frisbee frisbee, UriComponentsBuilder builder) {
             HttpHeaders headers = new HttpHeaders();
@@ -42,7 +50,9 @@ public class FrisbeeController {
             return new ResponseEntity<>(frisbee, HttpStatus.CREATED);
         }
 
-//    Kiekon poistaminen Id:n perusteella.
+    /**
+     * Kiekon poistaminen Id:n perusteella.
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFrisbee(@PathVariable("id") int id) {
         List<Frisbee> list = new ArrayList<>();
@@ -55,12 +65,15 @@ public class FrisbeeController {
         }
     }
 
-//    Kiekon muokkaus, löytö Id:llä. Vain yhden tiedon muokkaus tehty mahdolliseksi.
+    /**
+     * Kiekon muokkaus, löytö Id:llä. Vain yhden tiedon muokkaus tehty mahdolliseksi.
+     */
     @PutMapping("/{id}")
     public ResponseEntity<Frisbee> updateFrisbee(@PathVariable("id") int id,@RequestBody Frisbee frisbee) {
         frisbee.setId(id);
         Frisbee tempFrisbee = fr.findOne(id);
         if(frisbee.getName() != null && frisbee.getName() != "") tempFrisbee.setName(frisbee.getName());
+        if(frisbee.getBrand() != null && frisbee.getBrand() != "") tempFrisbee.setBrand(frisbee.getBrand());
         if(frisbee.getSpeed() != null) tempFrisbee.setSpeed(frisbee.getSpeed());
         if(frisbee.getGlide() != null) tempFrisbee.setGlide(frisbee.getGlide());
         if(frisbee.getTurn() != null) tempFrisbee.setTurn(frisbee.getTurn());
@@ -70,22 +83,29 @@ public class FrisbeeController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-// haetaan annetaan parametrin perusteella Pageable metodilla jolla voidaan maarittaa tulosten ja sivujen maara,
-//    annetaan tulos nousevassa järjestyksessä
+    /**
+     * haetaan annetaan parametrin perusteella Pageable metodilla jolla voidaan maarittaa tulosten ja sivujen maara,
+     * annetaan tulos nousevassa järjestyksessä
+     */
     @GetMapping("/frisbeeascending")
     public Iterable<Frisbee>findFrisbeeByParamAsc(@RequestParam int page, String param){
         Pageable p = PageRequest.of(page, 15, Sort.Direction.ASC, param);
         return fr.findAll(p);
     }
-    // haetaan annetun parametrin perusteella Pageable metodilla jolla voidaan määrittää tulosten ja sivujen määrä,
-//    annetaan tulos laskevassa järjestyksessä
+
+    /**
+     * haetaan annetun parametrin perusteella Pageable metodilla jolla voidaan määrittää tulosten ja sivujen määrä,
+     * annetaan tulos laskevassa järjestyksessä
+     */
     @GetMapping("/frisbeedescending")
     public Iterable<Frisbee>findFrsibeeByParamDesc(@RequestParam int page, String param) {
         Pageable p = PageRequest.of(page, 15, Sort.Direction.DESC, param);
         return fr.findAll(p);
     }
 
-//   Haetaan kiekkoja, jotka sisältävät hakusanan, välittämättä isoista/pienistä kirjaimista.
+    /**
+     * Haetaan kiekkoja, jotka sisältävät hakusanan, välittämättä isoista/pienistä kirjaimista.
+     */
     @GetMapping("/{haku}")
     public Iterable<Frisbee>findByName(@PathVariable String haku) {
         return fr.findByNameContainsIgnoreCase(haku);
