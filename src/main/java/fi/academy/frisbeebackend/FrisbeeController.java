@@ -2,7 +2,6 @@ package fi.academy.frisbeebackend;
 
 import fi.academy.frisbeebackend.repositories.FrisbeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -21,13 +20,11 @@ import java.util.List;
 @RequestMapping("/api/frisbee")
 public class FrisbeeController {
     private FrisbeeRepository fr;
-//    private int seuraavaArvo;
 
 //    Konstruktori, jossa tuodaan FrisbeeRepositori konstruktorin käyttöön.
     @Autowired
     public FrisbeeController(FrisbeeRepository fr) {
         this.fr = fr;
-//        this.seuraavaArvo = 0;
     }
 
 //    Kaikkien kiekkojen hakutoiminto.
@@ -39,22 +36,11 @@ public class FrisbeeController {
 //    Uuden kiekon lisääminen.
     @PostMapping("")
     public ResponseEntity<Frisbee> addFrisbee(@RequestBody Frisbee frisbee, UriComponentsBuilder builder) {
-//        List<Frisbee> list = new ArrayList<>();
-//        for(Frisbee f : fr.findAll()) {
-//            if(seuraavaArvo < f.getId()) seuraavaArvo = f.getId();
-//        }
-//        seuraavaArvo++;
-//        frisbee.setId(seuraavaArvo);
-//        fr.findById(frisbee.getId()).ifPresent(list::add);
-//        if (list.size() > 0) {
-//            return new ResponseEntity("Adding failed, Frisbee with that id already exists",HttpStatus.CONFLICT);
-//        } else {
             HttpHeaders headers = new HttpHeaders();
             headers.setLocation(builder.path("/{id}").buildAndExpand(frisbee.getId()).toUri());
             fr.save(frisbee);
             return new ResponseEntity<>(frisbee, HttpStatus.CREATED);
         }
-//    }
 
 //    Kiekon poistaminen Id:n perusteella.
     @DeleteMapping("/{id}")
@@ -91,7 +77,7 @@ public class FrisbeeController {
         Pageable p = PageRequest.of(page, 15, Sort.Direction.ASC, param);
         return fr.findAll(p);
     }
-    // haetaan annetaan parametrin perusteella Pageable metodilla jolla voidaan maarittaa tulosten ja sivujen maara,
+    // haetaan annetun parametrin perusteella Pageable metodilla jolla voidaan määrittää tulosten ja sivujen määrä,
 //    annetaan tulos laskevassa järjestyksessä
     @GetMapping("/frisbeedescending")
     public Iterable<Frisbee>findFrsibeeByParamDesc(@RequestParam int page, String param) {
@@ -99,6 +85,7 @@ public class FrisbeeController {
         return fr.findAll(p);
     }
 
+//   Haetaan kiekkoja, jotka sisältävät hakusanan, välittämättä isoista/pienistä kirjaimista.
     @GetMapping("/{haku}")
     public Iterable<Frisbee>findByName(@PathVariable String haku) {
         return fr.findByNameContainsIgnoreCase(haku);

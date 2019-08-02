@@ -2,6 +2,7 @@ package fi.academy.frisbeebackend;
 
 import javax.persistence.*;
 
+//Keskeneräinen luokka tulevia inkrementtejä varten.
 @Entity
 public class Player {
 
