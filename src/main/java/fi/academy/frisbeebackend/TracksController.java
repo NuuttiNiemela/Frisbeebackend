@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Conroller-class, johon lisätty alku url-annotaatio, CrossOrigin estämään CORS-ongelmat ja Springin vaatima RestController annotaatio.
+ * Controller-class, johon lisätty alku url-annotaatio, CrossOrigin estämään CORS-ongelmat ja Springin vaatima RestController annotaatio.
  */
 @RestController
 @CrossOrigin

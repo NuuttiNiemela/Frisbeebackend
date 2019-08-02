@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Conroller-class, johon lisätty alku url-annotaatio, CrossOrigin estämään CORS-ongelmat ja Springin vaatima RestController annotaatio.
+ * Controller-class, johon lisätty alku url-annotaatio, CrossOrigin estämään CORS-ongelmat ja Springin vaatima RestController annotaatio.
  */
 @RestController
 @CrossOrigin
@@ -73,6 +73,7 @@ public class FrisbeeController {
         frisbee.setId(id);
         Frisbee tempFrisbee = fr.findOne(id);
         if(frisbee.getName() != null && frisbee.getName() != "") tempFrisbee.setName(frisbee.getName());
+        if(frisbee.getBrand() != null && frisbee.getBrand() != "") tempFrisbee.setBrand(frisbee.getBrand());
         if(frisbee.getSpeed() != null) tempFrisbee.setSpeed(frisbee.getSpeed());
         if(frisbee.getGlide() != null) tempFrisbee.setGlide(frisbee.getGlide());
         if(frisbee.getTurn() != null) tempFrisbee.setTurn(frisbee.getTurn());
