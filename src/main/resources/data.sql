@@ -103,6 +103,7 @@ INSERT INTO frisbee(name,speed,glide,turn,fade) VALUES ('AVIAR',2,3,0,1);
 INSERT INTO frisbee(name,speed,glide,turn,fade) VALUES ('SONIC',1,2,-4,0);
 INSERT INTO frisbee(name,speed,glide,turn,fade) VALUES ('POLECAT',1,3,0,0);
 INSERT INTO frisbee(name,speed,glide,turn,fade) VALUES ('BIRDIE',1,2,0,0);
+UPDATE frisbee SET brand = 'Innova';
 
 INSERT INTO tracks(fullname,city,location,x,y) VALUES ('Ulvilan frisbeegolfrata','Ulvila','Vapaa-aikakeskus: Pappilantie 2, 28450 Vanha-Ulvila',61.432179,21.887866);
 INSERT INTO tracks(fullname,city,location,x,y) VALUES ('Yyterin frisbeegolfrata','Eurajoki','Yyteri, Pori',61.34012,21.31192);

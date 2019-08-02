@@ -14,6 +14,9 @@ public class Frisbee {
     @Column(name="name", nullable = false)
     private String name;
 
+    @Column(name="brand")
+    private String brand;
+
     @Column(name="speed")
     private Double speed;
 
@@ -77,11 +80,20 @@ public class Frisbee {
         this.fade = fade;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
     @Override
     public String toString() {
         return "Frisbee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
                 ", speed=" + speed +
                 ", glide=" + glide +
                 ", turn=" + turn +
